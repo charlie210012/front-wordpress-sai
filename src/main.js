@@ -1,4 +1,18 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import { createVuetify } from 'vuetify'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import 'vuetify/dist/vuetify.css';
+import '@mdi/font/css/materialdesignicons.css';
 
-createApp(App).mount('#app')
+
+
+const app = createApp(App);
+const vuetify = createVuetify()
+app.use(router);
+app.use(vuetify);
+
+
+app.mount('#app');
